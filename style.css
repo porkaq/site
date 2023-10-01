@@ -1,0 +1,252 @@
+html {
+    font-size: 15px;
+}
+a {
+    text-decoration: none;
+    color:unset;
+}
+
+.line {
+    border-bottom: 0.08rem solid #CCCCCC;
+}
+
+.left-menu {
+    font-size: 1.2rem;
+    display: flex;
+    position: sticky;
+    flex-direction: column;
+    align-items: center;
+    top: 5%;
+}
+
+.item-wrapper {
+    display: inline-block;
+}
+.left-general {
+    font-size: 1.3rem;
+    padding: .75rem;
+    display: flex;
+    margin-top: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
+
+.left-item {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-family: arial ;
+    letter-spacing: 1px;
+    padding: .15rem;
+}
+
+.left-item a {
+    text-decoration: none;
+    color: black;
+    font-family: arial ;
+    letter-spacing: 1px;
+}
+.left-item:hover{
+    background-color: white;
+}
+h4 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    padding-left: 1rem !important;
+    margin-bottom: 1.5rem !important;
+    margin-top: 2rem !important;
+    letter-spacing: 2px;
+    color: #222;
+    border-left: 2px solid #CCCCCC;
+}
+
+.text{
+    display: flex;
+}
+img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.card{
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, .12) inset;  */
+    font-size: 1rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    margin: 2%;
+    padding: 4%;
+}
+.img-wrapper {
+    width: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+
+}
+header {
+    font-size: 1.2rem;
+    backdrop-filter: blur(9px);
+    visibility: visible;
+    opacity: 1;
+    top:0;
+    position: fixed;
+    z-index: 90;
+    width: 100%;
+    transition-duration: 0.6s;
+}
+header ul {
+    list-style-type: none;
+}
+.head-container {
+    display: flex;
+    background-color: rgba(233, 230, 226, 0.386);
+    user-select: none;
+}
+.head-item {
+    white-space: nowrap;
+    height: auto;
+    padding: 7px;
+    margin: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition-duration: 0.6s;
+    box-sizing: content-box;
+    border-radius: 17px;
+}
+.head-item::after{
+    height: 2px;
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    top: 100%;
+    content: '';
+    background-color: rgba(233, 230, 226, 0);
+    transition-duration: 0.6s;
+    border-radius: 1px;
+}
+.head-item:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+.head-item:hover::after{
+    background-color: rgba(0, 0, 0, 0.258);
+}
+
+.no-after.head-item::after {
+    content: none;
+}
+.no-after .btn {
+    all:unset;
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    background-color: unset;
+}
+.hidden {
+    display: none;
+}
+.card-title {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0;
+}
+.description {
+    text-align: center;
+    font-size: .8em;
+    font-style: italic;
+}
+.card-row {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+.price, .gramm {
+    font-style: italic;
+    letter-spacing: 1px;
+}
+.head-center {
+    display: flex;
+    flex-grow: 3;
+    flex-basis: 0;
+    justify-content: center;
+    margin-left: 0.5rem;
+}
+.head-right {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0;
+    justify-content: start;
+}
+.mobile-nav {
+    display: flex;
+    gap: 1.5em;
+    display: none;
+
+}
+.mobile-nav-text-wrapper {
+    padding: 1em;
+}
+
+footer {
+    background-color: #bbb8b8;
+    height: 5rem;
+    padding: 1rem;
+}
+
+@media ((width >= 992px) and (width < 1200px)){
+    .left-menu{
+        font-size: 1rem;
+    }
+    .card{
+        font-size: 1rem !important;
+    }
+}
+@media (width < 992px) and (width > 767px){
+    .left-menu{
+        font-size: .8rem;
+    }
+    .card{
+        font-size: 0.85rem !important;
+    }
+}
+
+@media ((width >= 576px) and (width <= 767px )) {
+    html {
+        font-size: 13px;
+    }
+    .left-menu{
+        font-size: 0.8rem;
+    }
+    .card{
+        font-size: .9rem !important;
+    }
+}
+
+@media ( width < 576px ) {
+    .left-menu {
+        display: none;
+    }
+    /* .head-right .head-item {
+        margin-left: 18vw;
+    } */
+    .mobile-nav {
+        display: flex;
+    }
+    html {
+        font-size: 16px;
+    }
+    .head-item{
+        font-size: 0.9rem;
+    }
+    .card {
+        font-size: 0.8rem !important;
+    }
+}
